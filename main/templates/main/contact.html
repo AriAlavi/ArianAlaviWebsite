@@ -1,5 +1,47 @@
 {% extends "main/base.html" %}
 {% load static %}
 {% block content %}
-do not contact me : (
+
+<h1 align="center">Contact</h1>
+<div class="">
+    <div class="container">
+        <div class="row">
+            <div id="clickly" style="cursor: pointer; background-color: rgb(26, 26, 31); color: white;" >Click For Email (must have javascript enabled)</div>
+            By clicking you agree to not use my email for marketing purposes or sell my email address to a third party. This condition applies to anyone you distribute the email address to.
+            Also you agree that you are not a bot.
+        </div>
+    </div>
+</div>
+
+<script>
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+let ONGOING = false;
+document.getElementById("clickly").addEventListener("click", async function(e){
+    if(ONGOING){
+        return
+    }
+    ONGOING = true;
+    var div = e.currentTarget;
+    div.innerText = "goawaybot@gmail.com";
+    const PART1 = ["a", "r", "i", "a", "n", "a"];
+    const PART2 = ["l", "a", "v", "i", "1", "@"];
+    const PART3 = ["g", "m", "a", "i", "l", ".", "c", "o", "m"];
+    div.innerText = ""
+    for(var i = 0; i < PART1.length; i++){
+        div.innerText += PART1[i]
+        await sleep(100 * Math.random());
+    }
+    for(var i = 0; i < PART2.length; i++){
+        div.innerText += PART2[i]
+        await sleep(100 * Math.random());
+    }
+    for(var i = 0; i < PART3.length; i++){
+        div.innerText += PART3[i]
+        await sleep(100 * Math.random());
+    }
+    ONGOING = false;
+});
+</script>
 {% endblock content %}
