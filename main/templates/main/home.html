@@ -19,9 +19,22 @@
     </div>
     <div class="col-sm-6">
         <img src="{% static 'main/home.jpg' %}" alt="Image of Arian Alavi on a hike" style="border-radius: 6px; border: solid 3px black; width: 100%;">
-        <small>I also enjoy being in nature. I often hike the mountains near me and occasionally do backpacking. You can read more on the "Interests" [TODO](put a link to the interests page here) page.</small>
+        <small>I also enjoy being in nature. I often hike the mountains near me and occasionally do backpacking. You can read more on the <a href="{% url 'interests' %}">interests page</a>.</small>
     </div>
 </div>
 
-<h5 align="center">Here you will find; my projects, my experiences, and my contact information</h5>
+<div class="box">
+    <div class="row">
+        <h2 align="center">Education</h2>
+        <p>[In Progress] BS in Applied Mathematics from UC Santa Barbara (2017-2022) [3.46 GPA]</p>
+        <p style="margin-left: 1rem;">Additionally, having taken classes in the following fields...</p>
+        <ul style="margin-left: 3rem; list-style-position: inside;">
+            <li>Computer Science: Data Structures and Algorithms, Numerical Analysis, Discrete Structures, Structure and Interpretation of Computer Programs, Assembly Language, and Software</li>
+            <li>Business/Economics: Intro to Business, Financial Accounting, Decision Analysis & Management, Intermediate Macroeconomics </li>
+        </ul>
+        
+
+    </div>
+
+</div>
 {% endblock content %}
