@@ -1,0 +1,1 @@
+ssh -i "MAIN_ARI_ALAVI.pem" ubuntu@3.18.63.227
