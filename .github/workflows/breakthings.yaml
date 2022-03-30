@@ -41,4 +41,4 @@ jobs:
             source env/bin/activate
             pkill gunicorn
             sudo systemctl restart nginx
-            gunicorn -c gunicorn.py backend.wsgi --daemon
+            gunicorn -c gunicorn.py ArianAlaviWebsite.wsgi --daemon
