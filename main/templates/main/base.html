@@ -25,11 +25,14 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'contact' %}">Contact Me</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% static 'resume.pdf' %}">Resume</a>
+                  </li>
                 </ul>
               </div>
             </div>
           </nav>
-        <div class="container" style="padding-top: 10px;">
+        <div class="" style="padding-top: 10px;">
             {% block content %}{% endblock %}
         </div>
     </body>

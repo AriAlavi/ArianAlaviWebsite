@@ -1,40 +1,45 @@
 {% extends "main/base.html" %}
 {% load static %}
 {% block content %}
-<div class="row">
-    <div class="col-sm-6">
-        <h1 align="center">Arian Alavi</h1>
+<div class="section">
+    <div class="container">
         <div class="row">
-            <div class="col-sm-1 col-lg-3"></div>
-            <div class="col-sm-10 col-lg-6">
-                <ul>
-                    <li>Full stack developer with 4+ years of experience</li>
-                    <li>Studying BS In Applied Mathematics from UC Santa Barbara</li>
-                    <li>Countless personal projects (see below!)</li>
-                    <li>Leadership experience</li>
-                </ul>
+            <div class="col-sm-6">
+                <h1 align="center">Arian Alavi</h1>
+                <div class="row">
+                    <div class="col-sm-1 col-lg-3"></div>
+                    <div class="col-sm-10 col-lg-6">
+                        <ul>
+                            <li>Full stack developer with 4+ years of experience</li>
+                            <li>Studying BS In Applied Mathematics from UC Santa Barbara</li>
+                            <li>Countless personal projects (see below!)</li>
+                            <li>Leadership experience</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-1 col-lg-3"></div>
+                </div>
             </div>
-            <div class="col-sm-1 col-lg-3"></div>
+            <div class="col-sm-6">
+                <img src="{% static 'main/home.jpg' %}" alt="Image of Arian Alavi on a hike" style="border-radius: 6px; border: solid 3px black; width: 100%;">
+                <small>I also enjoy being in nature. I often hike the mountains near me and occasionally do backpacking. You can read more on the <a href="{% url 'interests' %}">interests page</a>.</small>
+            </div>
+        </div> 
+    </div>
+</div>
+
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <h2 align="center">Education</h2>
+            <p>[In Progress] BS in Applied Mathematics from UC Santa Barbara (2017-2022) [3.46 GPA]</p>
+            <p style="margin-left: 1rem;">Additionally, having taken classes in the following fields...</p>
+            <ul style="margin-left: 3rem; list-style-position: inside;">
+                <li>Computer Science: Data Structures and Algorithms, Numerical Analysis, Discrete Structures, Structure and Interpretation of Computer Programs, Assembly Language, and Software</li>
+                <li>Business/Economics: Intro to Business, Financial Accounting, Decision Analysis & Management, Intermediate Macroeconomics </li>
+            </ul>
         </div>
     </div>
-    <div class="col-sm-6">
-        <img src="{% static 'main/home.jpg' %}" alt="Image of Arian Alavi on a hike" style="border-radius: 6px; border: solid 3px black; width: 100%;">
-        <small>I also enjoy being in nature. I often hike the mountains near me and occasionally do backpacking. You can read more on the <a href="{% url 'interests' %}">interests page</a>.</small>
-    </div>
 </div>
 
-<div class="box">
-    <div class="row">
-        <h2 align="center">Education</h2>
-        <p>[In Progress] BS in Applied Mathematics from UC Santa Barbara (2017-2022) [3.46 GPA]</p>
-        <p style="margin-left: 1rem;">Additionally, having taken classes in the following fields...</p>
-        <ul style="margin-left: 3rem; list-style-position: inside;">
-            <li>Computer Science: Data Structures and Algorithms, Numerical Analysis, Discrete Structures, Structure and Interpretation of Computer Programs, Assembly Language, and Software</li>
-            <li>Business/Economics: Intro to Business, Financial Accounting, Decision Analysis & Management, Intermediate Macroeconomics </li>
-        </ul>
-        
-
-    </div>
-
-</div>
 {% endblock content %}
