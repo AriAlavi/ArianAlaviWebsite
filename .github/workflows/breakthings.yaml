@@ -28,4 +28,4 @@ jobs:
           script: |
             cd ArianAlaviWebsite
             source env/bin/activate
-            cd backend && pip install -r requirements.txt && echo Migrating from database now... && python manage.py migrate && python manage.py collectstatic --noinput
+            pip install -r requirements.txt && echo Migrating from database now... && python manage.py migrate && python manage.py collectstatic --noinput
