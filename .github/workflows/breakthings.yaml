@@ -7,14 +7,17 @@ jobs:
   update_server:
     name: Update Server
     runs-on: ubuntu-latest
-    with:
-      host: 3.18.63.227
-      username: ubuntu
-      key: ${{ secrets.PEM }}
-      port: 22
-      scripts: |
-        cd ArianAlaviWebsite
-        git pull
+    steps:
+      - name: Pull Changes
+        uses: appleboy/ssh-action@master
+        with:
+          host: 3.18.63.227
+          username: ubuntu
+          key: ${{ secrets.PEM }}
+          port: 22
+          script: |
+            cd ArianAlaviWebsite
+            git pull
       - name: Compile Backend
         uses: appleboy/ssh-action@master
         with:
@@ -23,6 +26,6 @@ jobs:
           key: ${{ secrets.PEM }}
           port: 22
           script: |
-            cd fireproofWebsite
+            cd ArianAlaviWebsite
             source env/bin/activate
             cd backend && pip install -r requirements.txt && echo Migrating from database now... && python manage.py migrate && python manage.py collectstatic --noinput
