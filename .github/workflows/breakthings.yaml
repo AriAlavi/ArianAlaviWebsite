@@ -1,7 +1,7 @@
 name: Break Things
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   update_server:
