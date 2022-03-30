@@ -2,14 +2,24 @@
     font-size: 1.2rem;
 }
 
-.box{
+.section{
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 1rem 2rem 2rem 2rem;
+}
+.section:nth-child(odd){
+    border-bottom: solid 2px #050526;
+}
+.section:nth-child(even){
     background-color: #d8dadf;
-    border-radius: 3px;
-    padding: .5rem 2rem 2rem 2rem;
-    margin: 2px;
-    border: solid 2px #050526;
 }
 
 a:link{
     color: #050526;
 }
+
+html, body{overflow:hidden;}
