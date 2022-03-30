@@ -13,4 +13,4 @@ def contact(request):
 
 def resume(request):
     filepath = staticfiles_storage.path("main/resume.pdf")
-    return FileResponse(open(filepath))
+    return FileResponse(open(filepath, "rb"))
