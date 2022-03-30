@@ -1,4 +1,14 @@
 {% extends "main/base.html" %}
+{% load static %}
 {% block content %}
-o _  o HI
+<div class="row">
+    <div class="col-sm-6">
+        <h1 align="center">Arian Alavi</h1>
+    </div>
+    <div class="col-sm-6">
+        <img src="{% static 'main/home.jpg' %}" alt="Image of Arian Alavi on a hike" style="border-radius: 6px; border: solid 3px black; width: 100%;">
+    </div>
+</div>
+
+<h5 align="center">Here you will find; my projects, my experiences, and my contact information</h5>
 {% endblock content %}
