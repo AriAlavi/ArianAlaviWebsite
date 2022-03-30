@@ -18,6 +18,9 @@
 .section:nth-child(even){
     background-color: #d8dadf;
 }
+.section:last-child{
+    border-bottom: none;
+}
 
 a:link{
     color: #050526;
