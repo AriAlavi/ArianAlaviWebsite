@@ -7,6 +7,7 @@ class Project(models.Model):
     description = models.TextField(max_length=128)
     image = models.ImageField(upload_to='projects')
 
+
     def presentDate(self) -> str:
         strf = "%b %Y"
         start = self.startDate.strftime(strf)
