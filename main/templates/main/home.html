@@ -21,7 +21,7 @@
             </div>
             <div class="col-sm-6">
                 <img src="{% static 'main/home.jpg' %}" alt="Image of Arian Alavi on a hike" style="border-radius: 6px; border: solid 3px black; width: 100%;">
-                <small>I also enjoy being in nature. I often hike the mountains near me and occasionally do backpacking. You can read more on the <a href="{% url 'interests' %}">interests page</a>.</small>
+                <small>I also enjoy being in nature. I often hike the mountains near me and occasionally go backpacking. You can read more on <a href="{% url 'interests' %}">my interests page</a>.</small>
             </div>
         </div> 
     </div>
@@ -32,12 +32,46 @@
     <div class="container">
         <div class="row">
             <h2 align="center">Education</h2>
-            <p>[In Progress] BS in Applied Mathematics from UC Santa Barbara (2017-2022) [3.46 GPA]</p>
+            <p> [In Progress] BS in Applied Mathematics from UC Santa Barbara (2017-2022) [3.46 GPA]</p>
             <p style="margin-left: 1rem;">Additionally, having taken classes in the following fields...</p>
             <ul style="margin-left: 3rem; list-style-position: inside;">
                 <li>Computer Science: Data Structures and Algorithms, Numerical Analysis, Discrete Structures, Structure and Interpretation of Computer Programs, Assembly Language, and Software</li>
                 <li>Business/Economics: Intro to Business, Financial Accounting, Decision Analysis & Management, Intermediate Macroeconomics </li>
             </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+                <h2 align="center">Work Experience</h2>
+                <p>While unusual these days, I've stayed with a single company, Innova Global, since 2017 (as an intern) and since 2018 (as a programmer). In fact, it's the only company I've worked for. What made Innova Global so appealing for all these years was that despite it being my first programming job, I was made the sole or lead developer of the projects I was tasked in, which was a great learning experience.
+                <div style="float: right" class="bigtext"><a href="https://www.innovaglobal.com/" target="_blank">Innova Global</a> / <a href="https://www.innovaaccelerator.com/" target="_blank">Innova Accelerator</a></div>
+                <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-6"><h4 style="margin-bottom: 0px;">Lead Full Stack Developer</h4><div></div><h5 style="margin-top: 0px;">[2018-Present]</h5></div>
+                    <div class="col-sm-6 col-lg-6">Innova Global is a network cabling installation company that has been in business for 30+ years. Innova Accelerator provides business acceleration resources in order to increase the efficiency of businesses, with a focus on marketing.</div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <img src="{% static 'main/innova_accelerator.jpg' %}" style="width: 4rem; height: 4rem; display: inline-block;"></a>
+                <img src="{% static 'main/innova_global.jpg' %}" style="width: 4rem; height: 4rem; display: inline-block;"></a>
+            </div>
+        </div>
+        <div class="row">
+            <h5>Responsibilities</h5>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <h2 align="center">Projects</h2>
+
+            {% include 'main/project.html' %}
+            {% include 'main/project.html' %}
         </div>
     </div>
 </div>

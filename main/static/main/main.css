@@ -17,6 +17,7 @@
 }
 .section:nth-child(even){
     background-color: #d8dadf;
+    border-bottom: solid 2px #050526 !important;
 }
 .section:last-child{
     border-bottom: none;
@@ -25,5 +26,24 @@
 a:link{
     color: #050526;
 }
+a{
+    color: #050526;
+}
 
-html, body{overflow:hidden;}
+.project{
+    background-color: #dcddff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.bigtext{
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.bigtext > * {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+html, body{overflow-x: hidden;}
