@@ -1,7 +1,54 @@
 {% extends "main/base.html" %}
 {% load static %}
 {% block content %}
+<h2 align="center">Interests (other than programming)</h2>
 <div class="section">
-    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                As you may have seen on the home page, I like hiking and backpacking. My favorite part is the views.
+            </div>
+            <div class="col-sm-6">
+                <img src="{% static 'main/hiking.jpg'%} " width="100%">
+                <small>My most recent backpacking trip near Santa Barbara</small>
+            </div>
+        </div>
+    </div> 
+</div>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="{% static 'main/bookStock.jpg'%} " width="100%">
+            </div>
+            <div class="col-sm-6">
+                I also enjoy reading philosophy whenever I find the time, although I seem to have less time for it than I used to. I think one of the most important things that you can do is ask yourself why you're doing what you're doing and really dig deep and understand the meaning behind your life.
+            </div>
+        </div>
+    </div> 
+</div>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                I also like to play video games, usually strategy ones. My favorites genres are strategy games, grand strategy games, and tactical shooters. Some examples are: Squad, Rimworld, and Europa Universalis 4.
+            </div>
+            <div class="col-sm-6">
+                <img src="{% static 'main/rimworld.png'%} " width="100%">
+            </div>
+        </div>
+    </div> 
+</div>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="{% static 'main/welding.png'%} " width="100%">
+            </div>
+            <div class="col-sm-6">
+                I am never against trying new things
+            </div>
+        </div>
+    </div> 
 </div>
 {% endblock content %}
