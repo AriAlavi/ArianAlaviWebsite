@@ -7,5 +7,8 @@ class Project(models.Model):
     description = models.TextField(max_length=128)
     image = models.ImageField(upload_to='projects')
 
+    class Meta:
+        ordering = ["-endDate"]
+
     def __str__(self):
         return f"[{self.name}] {self.description}"
