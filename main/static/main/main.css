@@ -12,10 +12,10 @@
     padding: 1rem 2rem 2rem 2rem;
     border-bottom: solid 2px #050526;
 }
-.section:nth-child(odd){
+.section:nth-of-type(odd){
     background-color: #f8f8f8;
 }
-.section:nth-child(even){
+.section:nth-of-type(even){
     background-color: #d8dadf;
     border-bottom: solid 2px #050526 !important;
 }
