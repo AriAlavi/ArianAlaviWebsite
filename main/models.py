@@ -6,7 +6,10 @@ class Project(models.Model):
     endDate = models.DateField()
     description = models.TextField(max_length=128)
     image = models.ImageField(upload_to='projects')
+    link = models.URLField(default=None, null=True)
 
+    def getLink(self):
+        return self.link or "#"
 
     def presentDate(self) -> str:
         strf = "%b %Y"
