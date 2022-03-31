@@ -109,8 +109,9 @@
         <div class="row">
             <h2 align="center">Projects</h2>
             <p>I genuinely enjoy programming and often have one or two projects running at every given moment. Here are some completed projects I would like to share...</p>
-            {% include 'main/project.html' %}
-            {% include 'main/project.html' %}
+            {% for project in projects %}
+                {% include 'main/project.html' %}
+            {% endfor %}
         </div>
     </div>
 </div>
