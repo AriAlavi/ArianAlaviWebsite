@@ -46,4 +46,17 @@ a{
     font-weight: 500;
 }
 
+.skill{
+    background-color: #9fb4ff;
+    font-size: 1rem;
+    max-width: 100px;
+    display: inline-block;
+    border: solid 2px black;
+    padding: 1px 8px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px 10px 4px 10px;
+    color: #46405c;
+}
+
 html, body{overflow-x: hidden;}
