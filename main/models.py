@@ -9,7 +9,7 @@ class Skill(models.Model):
         base = f"[{self.percent_ability*100}%] {self.name}"
         if not self.parent:
             return base
-        return base + "^{self.parent.name}"
+        return base + f"^{self.parent.name}"
 
     def __repr__(self):
         return str(self)
