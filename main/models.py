@@ -1,5 +1,14 @@
 from django.db import models
 
+class Skill(models.Model):
+    name = models.CharField(max_length=64)
+
+    def __str__(self):
+        return self.str
+
+    def __repr__(self):
+        return str(self)
+
 class Project(models.Model):
     name = models.CharField(max_length=64)
     startDate = models.DateField()
@@ -7,6 +16,7 @@ class Project(models.Model):
     description = models.TextField(max_length=128)
     image = models.ImageField(upload_to='projects')
     link = models.URLField(default=None, null=True)
+    skillsUsed = models.ManyToManyField(Skill)
 
     def getLink(self):
         return self.link or "#"
@@ -24,3 +34,6 @@ class Project(models.Model):
 
     def __str__(self):
         return f"[{self.name}] {self.description}"
+
+    def __repr__(self):
+        return str(self)
