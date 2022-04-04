@@ -1,5 +1,6 @@
 # Django
 
+*.pem
 media/*
 
 # Byte-compiled / optimized / DLL files
