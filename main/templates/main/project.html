@@ -4,12 +4,12 @@
         <div class="col-sm-6">
             <div>
                 {% for skill in project.skillsUsed.all %}
-                <div class="skill">{{skill.name}}</div>
+                <div class="skill" title="{{skill.name}}">{{skill.name}}</div>
                 {% endfor %}
             </div>
             <div>{% if project.link %}<a href="{{project.getLink}}">{% endif %}<h5>{{project.name}}</h5>{% if project.link %}</a>{% endif %}</div>
             <small>{{project.presentDate}}</small>
-            <p>{{project.description}}</p>
+            <p>{{project.description|safe}}</p>
 
         </div>
         
