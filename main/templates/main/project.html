@@ -2,6 +2,11 @@
 <div class="project">
     <div class="row">
         <div class="col-sm-6">
+            <div>
+                {% for skill in project.skillsUsed.all %}
+                <div class="skill">{{skill}}</div>
+                {% endfor %}
+            </div>
             <div>{% if project.link %}<a href="{{project.getLink}}">{% endif %}<h5>{{project.name}}</h5>{% if project.link %}</a>{% endif %}</div>
             <small>{{project.presentDate}}</small>
             <p>{{project.description}}</p>
