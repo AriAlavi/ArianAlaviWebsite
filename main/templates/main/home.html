@@ -103,7 +103,19 @@
         </div>
     </div>
 </div>
-
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <h2 align="center">Skills</h2>
+            <p>It can be hard sometimes to objectively evaluate your skills. This is my best estimate.</p>
+        </div>
+        <div class="row">
+            {% for skill in skills %}
+                {% include 'main/skill.html' %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
 <div class="section">
     <div class="container">
         <div class="row">
