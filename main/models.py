@@ -6,7 +6,7 @@ class Skill(models.Model):
     parent = models.ForeignKey("main.Skill", on_delete=models.SET_NULL, null=True, blank=True)
 
     class Meta:
-        ordering = ('percent_ability', 'name')
+        ordering = ('-percent_ability', 'name')
 
     def __str__(self):
         base = f"[{self.percent_ability*100}%] {self.name}"
