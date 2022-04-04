@@ -5,6 +5,9 @@ class Skill(models.Model):
     percent_ability = models.DecimalField(max_digits=3, decimal_places=2, default=0)
     parent = models.ForeignKey("main.Skill", on_delete=models.SET_NULL, null=True, blank=True)
 
+    class Meta:
+        ordering = ('percent_ability', 'name')
+
     def __str__(self):
         base = f"[{self.percent_ability*100}%] {self.name}"
         if not self.parent:
