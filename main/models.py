@@ -14,6 +14,9 @@ class Skill(models.Model):
             return base
         return base + f"^{self.parent.name}"
 
+    def getSkill(self)->float:
+        return self.percent_ability * 100
+
     def __repr__(self):
         return str(self)
 

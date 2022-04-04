@@ -5,7 +5,8 @@ from main.models import *
 
 def home(request):
     context = {
-        "projects" : Project.objects.all()
+        "projects" : Project.objects.all(),
+        "skills" : Skill.objects.all(),
     }
     return render(request, "main/home.html", context)
 
