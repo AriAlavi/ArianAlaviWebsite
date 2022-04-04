@@ -24,7 +24,7 @@ class Project(models.Model):
     description = models.TextField(max_length=1028)
     image = models.ImageField(upload_to='projects', null=True, blank=True)
     link = models.URLField(default=None, null=True, blank=True)
-    skillsUsed = models.ManyToManyField(Skill)
+    skillsUsed = models.ManyToManyField(Skill, null=True, blank=True)
 
     def getLink(self):
         return self.link or "#"
