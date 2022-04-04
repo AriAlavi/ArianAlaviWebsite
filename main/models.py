@@ -21,7 +21,7 @@ class Project(models.Model):
     name = models.CharField(max_length=64)
     startDate = models.DateField()
     endDate = models.DateField()
-    description = models.TextField(max_length=128)
+    description = models.TextField(max_length=1028)
     image = models.ImageField(upload_to='projects')
     link = models.URLField(default=None, null=True, blank=True)
     skillsUsed = models.ManyToManyField(Skill)
