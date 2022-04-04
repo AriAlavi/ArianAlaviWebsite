@@ -3,9 +3,13 @@ from django.db import models
 class Skill(models.Model):
     name = models.CharField(max_length=64)
     percent_ability = models.DecimalField(max_digits=3, decimal_places=2, default=0)
+    parent = models.ForeignKey("main.Skill", on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        base = f"[{self.percent_ability*100}%] {self.name}"
+        if not self.parent:
+            return base
+        return base + "^{self.parent.name}"
 
     def __repr__(self):
         return str(self)
