@@ -13,6 +13,6 @@
 
         </div>
         
-        <div class="col-sm-6"><img src="{{project.image.url}}" style="width: 100%; object-fit: contain; float: right;"></div>
+        <div class="col-sm-6">{% if project.image %}<img src="{{project.image.url}}" style="width: 100%; object-fit: contain; float: right;">{% endif %}</div>
     </div>
 </div>
