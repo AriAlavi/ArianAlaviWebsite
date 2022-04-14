@@ -23,6 +23,16 @@
     border-bottom: none;
 }
 
+.paper{
+    height: 10.2in;
+    width: 7.7in;
+    background-color: white;
+    border: solid 3px black;
+    border-radius: 4px 20px 4px 4px;
+    position: absolute;
+    margin: 1in;
+}
+
 a:link{
     color: #050526;
 }
