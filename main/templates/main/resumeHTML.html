@@ -1,0 +1,33 @@
+{% include 'main/head.html' %}
+<style>
+* {
+    font-size: 12px;
+}
+a {
+    color: white;
+}
+a:link{
+    color: white;
+}
+a:hover{
+    color: white;
+}
+
+@media print{
+    .buttonArea{
+        display: none !important;
+    }
+    .paper{
+        border: none !important;
+        margin: 0px !important;
+    }
+}
+</style>
+<div class="paper">
+Test
+</div>
+
+<div class="buttonArea" style="position:absolute; left: 11in; top: 1rem;">
+    <a href="{% url 'home' %}"><button class="btn btn-primary">Return home</button></a>
+    <button class="btn btn-primary" onclick="window.print();">Print/PDF</button>
+</div>

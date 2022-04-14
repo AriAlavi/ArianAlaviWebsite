@@ -16,6 +16,9 @@ def interests(request):
 def contact(request):
     return render(request, "main/contact.html")
 
-def resume(request):
+def resumeFile(request):
     filepath = staticfiles_storage.path("main/resume.pdf")
     return FileResponse(open(filepath, "rb"))
+
+def resume(request):
+    return render(request, "main/resumeHTML.html")
