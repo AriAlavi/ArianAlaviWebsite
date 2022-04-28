@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.http import FileResponse
+from django.http import HttpResponseRedirect
 from main.models import *
 
 def home(request):
@@ -22,3 +23,6 @@ def resumeFile(request):
 
 def resume(request):
     return render(request, "main/resumeHTML.html")
+
+def kapwing(request):
+    return HttpResponseRedirect("https://afternoon-crag-82242.herokuapp.com/")
