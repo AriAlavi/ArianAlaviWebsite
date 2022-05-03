@@ -23,6 +23,3 @@ def resumeFile(request):
 
 def resume(request):
     return render(request, "main/resumeHTML.html")
-
-def kapwing(request):
-    return HttpResponseRedirect("https://afternoon-crag-82242.herokuapp.com/")
