@@ -23,3 +23,6 @@ def resumeFile(request):
 
 def resume(request):
     return render(request, "main/resumeHTML.html")
+
+def meeting(request):
+    return render(request, "main/meeting.html")
