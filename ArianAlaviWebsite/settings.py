@@ -30,17 +30,19 @@ SECRET_KEY = ""
 SECRETS_FILE = "secrets.json"
 SECRET_PATH = os.path.join(BASE_DIR, SECRETS_FILE)
 
+TESTING_ENV = True
 if os.path.exists(SECRET_PATH):
     file = open(SECRET_PATH, "r")
     data = json.load(file)
     file.close()
     SECRET_KEY = data["SECRET_KEY"]
+    TESTING_ENV = False
 else:
     SECRET_KEY = 'django-insecure-3-@nvsj!-j@b_r2*-a_wl$%zrybk(l_$2hiz=lm(58p+*&ekh_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# ARI DONT CARE
-DEBUG = True
+
+DEBUG = TESTING_ENV
 
 ALLOWED_HOSTS = ['localhost', '3.18.63.227']
 
